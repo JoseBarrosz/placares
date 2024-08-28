@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar de Voleibol</title>
+    <link rel="stylesheet" href="volei.css">
+</head>
+<body>
+    <div class="placar">
+        <div class="time" id="timeA">
+            <h2>Time A</h2>
+            <div class="set-pontos">
+                <div class="sets">
+                    <span id="setsA">0</span><br>
+                    <span>Sets</span>
+                </div>
+                <div class="pontos">
+                    <span id="pontosA">0</span><br>
+                    <span>Pontos</span>
+                </div>
+            </div>
+            <button onclick="incrementarPonto('pontosA', 'setsA')">+</button>
+            <button onclick="decrementarPonto('pontosA')">-</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="time" id="timeB">
+            <h2>Time B</h2>
+            <div class="set-pontos">
+                <div class="sets">
+                    <span id="setsB">0</span><br>
+                    <span>Sets</span>
+                </div>
+                <div class="pontos">
+                    <span id="pontosB">0</span><br>
+                    <span>Pontos</span>
+                </div>
+            </div>
+            <button onclick="incrementarPonto('pontosB', 'setsB')">+</button>
+            <button onclick="decrementarPonto('pontosB')">-</button>
+        </div>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>

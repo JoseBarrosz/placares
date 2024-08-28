@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar de Futebol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scoreboard">
+        <div class="team">
+            <h2>Time A</h2>
+            <div id="scoreA" class="score">0</div>
+            <div class="score-buttons">
+                <button onclick="incrementScore('A')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"/>
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                    </svg>
+                </button>
+                <button onclick="decrementScore('A')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="timer">
+            <input type="number" id="gameTime" placeholder="Minutos" min="1">
+            <div class="control-buttons">
+                <button onclick="toggleTimer()" id="toggleButton">
+                    <svg id="toggleIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play-circle"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                </button>
+                <button onclick="resetTimer()">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9h13a5 5 0 0 1 0 10H7M3 9l4-4M3 9l4 4"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="circle-container">
+                <svg class="progress-ring" width="120" height="120">
+                    <circle class="progress-ring__circle" 
+                            stroke="red" 
+                            stroke-width="8" 
+                            fill="transparent" 
+                            r="52" 
+                            cx="60" 
+                            cy="60" />
+                </svg>
+                <div id="timeDisplay" class="time">00:00</div>
+            </div>
+        </div>
+
+        <div class="team">
+            <h2>Time B</h2>
+            <div id="scoreB" class="score">0</div>
+            <div class="score-buttons">
+                <button onclick="incrementScore('B')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"/>
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                    </svg>
+                </button>
+                <button onclick="decrementScore('B')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
